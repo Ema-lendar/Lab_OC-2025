@@ -10,7 +10,7 @@ _start:
 	call puts			; imprime cadena msg terminada en valor nulo (0)
 
     ;mov al,'z'
-    mov byte[msg],'z'
+    mov byte[msg],'z';directo
 
     call puts
 

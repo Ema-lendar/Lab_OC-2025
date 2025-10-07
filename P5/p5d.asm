@@ -12,7 +12,7 @@ _start:
     mov esi,25			; imprime cadena msg terminada en valor nulo (0)
     mov ebx,msg
     mov al,'Z'
-    mov [ebx,esi],al
+    mov [ebx+esi],al;base mas indice
 
     call puts
 

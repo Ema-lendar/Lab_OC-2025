@@ -12,8 +12,8 @@ _start:
     mov al,'%'
     mov esi,3
     mov ebx,msg
-    mov [ebx+esi*4+7],al
-    ;mov [ebx],al
+    mov 7[ebx+esi*4],al ;relativo a base + indice escalado
+    
 
     call puts
 

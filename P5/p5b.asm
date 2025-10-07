@@ -11,7 +11,7 @@ _start:
 
     mov al,'X'
     mov ebx,msg +23
-    mov [ebx],al
+    mov [ebx],al;indirecto
 
     call puts
 

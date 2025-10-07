@@ -14,7 +14,7 @@ _start:
     mov esi,20
     mov ebx,msg
 
-    mov [msg+esi+5],al
+    mov [msg+esi+5],al ;relativo a base mas indice
 
     call puts
 

@@ -11,7 +11,7 @@ _start:
 
     mov al,'@'
     mov ebx,msg
-    mov [ebx+26],al
+    mov [ebx+26],al;relativo a registro
 
     call puts
 
