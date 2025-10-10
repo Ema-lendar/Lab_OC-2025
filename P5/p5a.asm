@@ -5,12 +5,12 @@ section	.text
 	global _start       ;referencia para inicio de programa
 	
 _start:     
-
+	
 	mov edx, msg		; edx = dirección de la cadena msg
 	call puts			; imprime cadena msg terminada en valor nulo (0)
 
-    ;mov al,'z'
-    mov byte[msg],'z';directo
+    
+    mov byte[msg],'Z';directo
 
     call puts
 
