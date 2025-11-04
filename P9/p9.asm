@@ -60,6 +60,7 @@ ciclosuma:
     inc esi
     loop ciclosuma
     mov edx,0
+    mov ecx,10
 ciclopro:
     mov al,byte[ebx+esi]
     mul byte[edx+esi] ;ax=al*edx
@@ -68,10 +69,6 @@ ciclopro:
     loop ciclopro
     mov ax,dx
     call pHex_w
-
-
-
-
     mov eax,1
     int 80h
 
