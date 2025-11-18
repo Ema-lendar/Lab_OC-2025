@@ -59,15 +59,17 @@ ciclosuma:
     call pHex_b
     inc esi
     loop ciclosuma
-    mov edx,0
+    mov edi,0
     mov ecx,10
 ciclopro:
     mov al,byte[ebx+esi]
     mul byte[edx+esi] ;ax=al*edx
-    add dx,ax
+    add di,ax
     inc esi
     loop ciclopro
-    mov ax,dx
+    mov al,10
+    call putchar
+    mov ax,di
     call pHex_w
     mov eax,1
     int 80h
