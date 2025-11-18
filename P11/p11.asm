@@ -6,8 +6,19 @@ global pBin8b
 global pBin16b
 global pBin32b
 global pBin64b
+global Myputchar
 
-pBin8b:
+Myputchar:
+    push eax
+    push edx
+    push ecx
+    mov al,10
+    call putchar
+    pop ecx
+    pop edx
+    pop eax
+    ret
+pBin8:
     push ebp
     mov ebp,esp
     push edx
@@ -32,12 +43,22 @@ pBin8b:
         pop ebp
         ret
 
+pBin8b:
+    push ebp
+    add ebp,4
+    mov cl,24
+    call pBin8
+    pop ebp
+    ret
+   
+
 pBin16b:
     push ebp
-    mov ebp,esp
+    ;add ebp,
+    push ecx
     mov cl,16
+    call pBin8
     call pBin8b
-    mov cl, 24
-    call pBin8b
-    pop ebp 
+    pop ecx
+    pop ebp
     ret
